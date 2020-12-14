@@ -1,4 +1,4 @@
-clear all, clc
+clear all
 image = imread('rice_binary.png');
 %figure, imshow(image);
 %image = rgb2gray(image);
@@ -89,22 +89,73 @@ for i=1:lin
     end
 end
 
-imwrite(image_north_cir,'output/north_circular.png')
-imwrite(image_south_cir,'output/south_circular.png')
-imwrite(image_east_cir,'output/east_circular.png')
-imwrite(image_west_cir,'output/west_circular.png')
+figure;
+subplot(2, 8, 1);
+title("Filtro norte linear");
+imshow(image_north_lin);
+subplot(2, 8, 2);
+title("Filtro sul linear");
+imshow(image_south_lin);
+subplot(2, 8, 3);
+title("Filtro leste linear");
+imshow(image_east_lin);
+subplot(2, 8, 4);
+title("Filtro oeste linear");
+imshow(image_west_lin);
+subplot(2, 8, 5);
+title("Filtro nordeste linear");
+imshow(image_northeast_lin);
+subplot(2, 8, 6);
+title("Filtro noroeste linear");
+imshow(image_northwest_lin);
+subplot(2, 8, 7);
+title("Filtro sudeste linear");
+imshow(image_southeast_lin);
+subplot(2, 8, 8);
+title("Filtro sudoeste linear");
+imshow(image_southwest_lin);
 
-imwrite(image_northeast_cir,'output/northeast_circular.png')
-imwrite(image_northwest_cir,'output/northwest_circular.png')
-imwrite(image_southeast_cir,'output/southeast_circular.png')
-imwrite(image_southwest_cir,'output/southwest_circular.png')
+subplot(2, 8, 9);
+title("Filtro norte circular");
+imshow(image_north_cir);
+subplot(2, 8, 10);
+title("Filtro sul circular");
+imshow(image_south_cir);
+subplot(2, 8, 11);
+title("Filtro leste circular");
+imshow(image_east_cir);
+subplot(2, 8, 12);
+title("Filtro oeste circular");
+imshow(image_west_cir);
+subplot(2, 8, 13);
+title("Filtro nordeste circular");
+imshow(image_northeast_cir);
+subplot(2, 8, 14);
+title("Filtro noroeste circular");
+imshow(image_northwest_cir);
+subplot(2, 8, 15);
+title("Filtro sudeste circular");
+imshow(image_southeast_cir);
+subplot(2, 8, 16);
+title("Filtro sudoeste circular");
+imshow(image_southwest_cir);
 
-imwrite(image_north_lin,'output/north_linear.png')
-imwrite(image_south_lin,'output/south_linear.png')
-imwrite(image_east_lin,'output/east_linear.png')
-imwrite(image_west_lin,'output/west_linear.png')
-
-imwrite(image_northeast_lin,'output/northeast_linear.png')
-imwrite(image_northwest_lin,'output/northwest_linear.png')
-imwrite(image_southeast_lin,'output/southeast_linear.png')
-imwrite(image_southwest_lin,'output/southwest_linear.png')
+% imwrite(image_north_cir,'output/north_circular.png')
+% imwrite(image_south_cir,'output/south_circular.png')
+% imwrite(image_east_cir,'output/east_circular.png')
+% imwrite(image_west_cir,'output/west_circular.png')
+%
+% imwrite(image_northeast_cir,'output/northeast_circular.png')
+% imwrite(image_northwest_cir,'output/northwest_circular.png')
+% imwrite(image_southeast_cir,'output/southeast_circular.png')
+% imwrite(image_southwest_cir,'output/southwest_circular.png')
+%
+% imwrite(image_north_lin,'output/north_linear.png')
+% imwrite(image_south_lin,'output/south_linear.png')
+% imwrite(image_east_lin,'output/east_linear.png')
+% imwrite(image_west_lin,'output/west_linear.png')
+%
+% imwrite(image_northeast_lin,'output/northeast_linear.png')
+% imwrite(image_northwest_lin,'output/northwest_linear.png')
+% imwrite(image_southeast_lin,'output/southeast_linear.png')
+% imwrite(image_southwest_lin,'output/southwest_linear.png')
